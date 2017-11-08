@@ -2,7 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 const { dev_server: devServer } = require('../config')
 
-const postcssConfigPath = path.resolve(process.cwd(), '.postcssrc.yml')
+const postcssConfigPath = path.resolve(process.cwd(), 'postcss.config.js')
 const isProduction = process.env.NODE_ENV === 'production'
 const inDevServer = process.argv.find(v => v.includes('webpack-dev-server'))
 const extractCSS = !(inDevServer && (devServer && devServer.hmr))
